@@ -1,15 +1,13 @@
 # templates-migration
 
 === PREREQUISITES ===
-Run in Python 3 or Python 2
+Run in Python 3
 
 Install requests module, via macOS terminal:
 Python 3 > pip3 install requests
-Python 2 > sudo pip install requests
 
 Install Meraki module:
 Python 3 > pip3 install meraki
-Python 2 > pip install meraki
 
 === DESCRIPTION ===
 This script finds all networks matching a network tag (configured on the Organization > Overview page's table), and binds those networks to the target template (by name). The network's current VLANs for unique subnets will be reconfigured after binding to the target template, since binding to a template regenerates these unique subnets. Also, if the network is currently bound to a different template, it will be unbound from that current template first.
